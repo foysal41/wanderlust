@@ -6,7 +6,7 @@ import Image from "next/image";
 export default async function DestinationDetalisPage({params}) {
     const {id} = await params
    
-    const res = await fetch(`http://localhost:5000/destination/${id}`)
+    const res = await fetch(`https://wanderlust-server-f87e.onrender.com/destination/${id}`)
     const destination = await res.json();
     const { imageUrl, price , destinationName ,duration ,country, description} = destination
 

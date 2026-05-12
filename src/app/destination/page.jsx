@@ -2,7 +2,7 @@ import DestinationCard from "../components/DestinationCard";
 
 export default async function DestinationPage() {
 
-  const res = await fetch("http://localhost:5000/destination")
+  const res = await fetch("https://wanderlust-server-f87e.onrender.com/destination")
   const destinations = await res.json();
   
   return (

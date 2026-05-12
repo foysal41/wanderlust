@@ -13,7 +13,7 @@ const {  _id, imageUrl, price , destinationName ,duration ,country,category, dep
         const destination = Object.fromEntries(formData.entries());
         console.log(destination)
 
-        const res = await fetch(`http://localhost:5000/destination/${_id}`, {
+        const res = await fetch(`https://wanderlust-server-f87e.onrender.com/destination/${_id}`, {
             method: "PATCH",
             headers:{
                 'content-type' : 'application/json'

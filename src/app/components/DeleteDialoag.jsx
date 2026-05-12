@@ -1,12 +1,13 @@
 
 "use client";
 import {AlertDialog, Button} from "@heroui/react";
-import { redirect } from "next/dist/server/api-utils";
+import { useRouter } from "next/navigation";
 
 export default function DeleteDialoag({destination}) {
+    const router = useRouter();
     const {_id,destinationName} = destination
     const handleDelete = async() => {
-        const res = await fetch(`http://localhost:5000/destination/${_id}`,{
+        const res = await fetch(`https://wanderlust-server-f87e.onrender.com/destination/${_id}`,{
             method: "DELETE",
             headers: {'content-type' : "application/json"}
 
@@ -14,7 +15,8 @@ export default function DeleteDialoag({destination}) {
 
 
         const data = await res.json()
-        redirect('/destination')
+        router.push("/destination");
+        router.refresh();
 
     }
 

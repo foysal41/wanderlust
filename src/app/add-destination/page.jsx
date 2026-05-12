@@ -11,7 +11,7 @@ export default function AddDestinationPage() {
         const formData = new FormData(e.currentTarget)
         const destination = Object.fromEntries(formData.entries());
 
-        const res = await fetch("http://localhost:5000/destination", {
+        const res = await fetch("https://wanderlust-server-f87e.onrender.com/destination", {
             method: "POST",
             headers:{
                 'content-type' : 'application/json'
