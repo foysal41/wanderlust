@@ -4,6 +4,7 @@ export default async function DestinationPage() {
 
   const res = await fetch("https://wanderlust-server-f87e.onrender.com/destination")
   const destinations = await res.json();
+  console.log(destinations)
   
   return (
     <div className="max-w-7xl mx-auto py-15 px-5">
