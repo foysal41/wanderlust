@@ -8,7 +8,7 @@ export default async function DestinationPage() {
   
   return (
     <div className="max-w-7xl mx-auto py-15 px-5">
-      <h1>All Destinations</h1>
+      <h1>All Destinationss</h1>
 
       <div className="grid grid-cols-3 gap-4">
         {
